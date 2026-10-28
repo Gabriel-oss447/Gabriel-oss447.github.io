@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyectos | Centenario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <!-- CABECERA: logo + enlaces + botones de sesión (los rellena app.js en #nav-session) -->
+    <a class="logo" href="index.html"><img src="Assets/Imagenes/Logo.png" alt="Logo Kristel"></a>
+    <nav class="main-nav" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+      </ul>
+      <div class="nav-actions"><span id="nav-session" class="nav-session"></span></div>
+    </nav>
+  </header>
+
+  <!-- ============ TODOS LOS PROYECTOS ============
+       Cada tarjeta lleva: imagen del terreno → botón "Descargar plano PDF" → dirección con Google Maps.
+       Las tarjetas se generan desde la lista "proyectos" de app.js (ahí editas fotos, PDFs y direcciones). -->
+  <main class="proyectos-page">
+    <h1>Nuestros proyectos</h1>
+    <p class="section-sub">Descarga el plano de cada terreno y ubícalo en el mapa.</p>
+    <section class="plano-grid" id="grid-proyectos"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

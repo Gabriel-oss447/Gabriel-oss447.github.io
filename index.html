@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kristel | Encuentra el Terreno Perfecto para tu Hogar</title>
+  <meta name="description" content="¡Busca y encuentra el terreno ideal para construir la casa de tus sueños!">
+  <!-- Aquí se enlaza el archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       1. <header> → CABECERA SUPERIOR
+       Parte de arriba de la página: barra promocional + logo.
+       En el CSS se controla con: .site-header, .promo-bar, .logo
+       ============================================================ -->
+  <header class="site-header">
+
+    <!-- 1.1 Barra promocional con el lema "Terrenos con Crédito Directo" -->
+    <p class="promo-bar">Inmobiliaria Kristel</p>
+
+    <!-- 1.2 Logo (clic lleva al inicio) -->
+    <a class="logo" href="index.html">
+      <img src="Assets/Imagenes/logo.png" width="50" height="50" alt="Logo Kristel">
+    </a>
+
+    <!-- ============================================================
+         2. <nav> → MENÚ DE NAVEGACIÓN PRINCIPAL
+         Enlaces a las páginas internas. Cambia el texto o el href
+         para editar el menú. CSS: .main-nav, .main-nav a
+         ============================================================ -->
+    <nav class="main-nav" aria-label="Menú principal">
+      <ul>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="/invierte-aqui/">Invierte aquí</a></li>
+        <li><a href="/nosotros/">Nosotros</a></li>
+        <li><a href="/contacto/">Contáctanos</a></li>
+        <li><a href="/transparencia/"></a></li>
+        <li><a href="#">Portal de venta de terrenos</a></li>
+      </ul>
+
+      <!-- Botones de acción al final del menú. CSS: .btn, .btn-primary, .btn-outline -->
+      <div class="nav-actions">
+        <!-- Botones de sesión (los rellena app.js: Iniciar sesión / Crear cuenta / Cerrar sesión) -->
+        <span id="nav-session" class="nav-session"></span>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       CONTENEDOR GENERAL: divide la página en 2 columnas
+       (izquierda = <main> con las <section>, derecha = <aside>)
+       CSS: .layout
+       ============================================================ -->
+  <div class="layout" id="content">
+
+    <!-- ==========================================================
+         <main> → CONTENIDO PRINCIPAL (columna izquierda grande)
+         Contiene todas las <section> de la página.
+         CSS: .content
+         ========================================================== -->
+    <main class="content">
+
+      <!-- ========================================================
+           3. <section> HERO → BANNER / CARRUSEL PRINCIPAL
+           Imágenes grandes de campañas. Cambia las imágenes (src)
+           para modificar los banners. CSS: .hero, .hero-slide
+           ======================================================== -->
+      <section class="hero" aria-label="Banners principales">
+        <article class="hero-slide">
+          <img src="Assets/Portada/Portada Principal.png" alt="Banner principal" width="50">
+        </article>
+        <article class="hero-slide">
+          <img src="Assets/Portada/Portada 1.png" alt="Campaña internacional">
+        </article>
+        <article class="hero-slide">
+          <img src="Assets/Portada/Portada 2.png" alt="Laderas del Valle">
+        </article>
+      </section>
+
+
+      <!-- ========================================================
+           4. <section> SOBRE LA EMPRESA → DESCRIPCIÓN Y UBICACIÓN
+           Izquierda: breve descripción de Centenario.
+           Derecha: dónde se encuentra (dirección, horario, teléfono y mapa).
+           Reemplaza los datos entre [CORCHETES] por los reales.
+           CSS: .about, .about-text, .about-location, .about-map
+           ======================================================== -->
+      <section class="about" id="nosotros">
+
+        <!-- 4.1 Descripción de la empresa -->
+        <div class="about-text">
+          <h2>Sobre Kristel</h2>
+          <p>Kristel es una empresa peruana dedicada a la venta de terrenos y urbanizaciones. Con más de 5 años de
+            trayectoria, desarrolla proyectos en distintas regiones del país y ofrece precios accesibles, para que más familias puedan tener su terreno propio.</p>
+          <p>Nuestro compromiso es acompañarte en cada paso: desde elegir el proyecto ideal hasta la entrega de tu
+            terreno.</p>
+          <a class="btn btn-outline" href="proyectos.html">Ver proyectos</a>
+        </div>
+
+        <!-- 4.2 Ubicación: dirección + botón "Cómo llegar" -->
+        <article class="about-location">
+          <h3>¿Dónde nos encontramos?</h3>
+          <p><strong>Oficina principal:</strong> Av. 9 de Diciembre / Jr.Señor de Muruhuay, Pilcomayo, Junin, Perú</p>
+          <p><strong>Horario de atención:</strong> [Lunes a viernes, 9:00 a. m. – 6:00 p. m.]</p>
+          <p><strong>Teléfono:</strong> <a href="tel:+51941381634">+51 941 381 634</a></p>
+          <p><strong>Proyectos en:</strong> Pilcomayo, Chucapa y Huancayo.</p>
+          <!-- Cambia "Lima, Perú" por tu dirección exacta en las 2 líneas siguientes (usa + en lugar de espacios) -->
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/7rZfHcP4pFFWTm4w8" target="_blank"
+            rel="noopener">Cómo llegar ↗</a>
+        </article>
+
+        <!-- 4.3 Mapa de Google Maps -->
+        <iframe class="about-map" src="https://www.google.com/maps?q=Av.+9+de+Diciembre+%2F+Jr.Señor+de+Muruhuay,+Pilcomayo,+Junin,+Peru&output=embed" loading="lazy"
+          title="Ubicación de Kristel"></iframe>
+      </section>
+
+
+      <!-- ========================================================
+           5. <section> PROYECTOS DESTACADOS → TARJETAS DE TERRENOS
+           Cada <article> es UNA tarjeta de proyecto (etiqueta,
+           nombre, ubicación, área, precio y botón).
+           Para añadir un proyecto: copia un <article> completo.
+           CSS: .featured, .cards-grid, .project-card, .badge,
+                .card-title, .card-meta, .card-price
+           ======================================================== -->
+      <section class="featured">
+        <div class="section-head">
+          <h2>Proyectos destacados</h2>
+          <a href="proyectos.html">Ver todos &gt;</a>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- Tarjeta 1 -->
+          <article class="project-card">
+            <span class="badge">Nueva urbanización</span> <!-- Etiqueta de color -->
+            <h3 class="card-title">Urbanización Mirador del Valle</h3> <!-- Nombre -->
+            <img src="Assets/Imagenes/Urbanización Mirador del Valle.png" alt="Mapa 1">
+            <p class="card-meta">A solo 5.1 km del Centro de Huancayo · Desde 120 m²</p> <!-- Ubicación y área -->
+            <p class="card-price">Precios desde: <strong>S/ 55,000</strong></p> <!-- Precio -->
+            <a class="btn btn-primary" href="proyectos.html">Ver proyecto</a>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="project-card">
+            <span class="badge">Nueva urbanización</span>
+            <h3 class="card-title">Proyecto Alto Miraflores</h3>
+            <img src="Assets/Imagenes/Proyecto Alto Miraflores.png" alt="Mapa 2">
+            <p class="card-meta">A solo 7.6 km del Centro de Huancayo · Desde 90 m²</p>
+            <p class="card-price">Precios desde: <strong>S/ 45,000</strong></p>
+            <a class="btn btn-primary" href="proyectos.html">Ver proyecto</a>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="project-card">
+            <span class="badge">Nueva etapa</span>
+            <h3 class="card-title">Proyecto La Perla</h3>
+            <img src="Assets/Imagenes/Proyecto La Perla.png" alt="Mapa 3">
+            <p class="card-meta">A solo 1.6 km de la Plaza Principal de Chupaca · Desde 90 m²</p>
+            <p class="card-price">Precios desde: <strong>S/ 50,000</strong></p>
+            <a class="btn btn-primary" href="proyectos.html">Ver proyecto</a>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="project-card">
+            <span class="badge">Nueva etapa</span>
+            <h3 class="card-title">Proyecto La Planicie</h3>
+            <img src="Assets/Imagenes/Proyecto La Planicie.png" alt="Mapa 4">
+            <p class="card-meta">Pilcomayo / A solo 7.5 km del centro de Huancayo· Desde 94 m²</p>
+            <p class="card-price">Precios desde: <strong>S/ 62,000</strong></p>
+            <a class="btn btn-primary" href="proyectos.html">Ver proyecto</a>
+          </article>
+
+          <!-- Tarjeta 5 -->
+          <article class="project-card">
+            <span class="badge">Últimos terrenos</span>
+            <h3 class="card-title">Proyecto Valle</h3>
+            <img src="Assets/Imagenes/Proyecto Valle.png" alt="Mapa 5">
+            <p class="card-meta">Sicaya / A solo 8.6 km del centro de Huancayo · Desde 90 m²</p>
+            <p class="card-price">Precios desde: <strong>S/ 25,000</strong></p>
+            <a class="btn btn-primary" href="proyectos.html">Ver proyecto</a>
+          </article>
+
+        </div>
+      </section>
+
+
+      <!-- ========================================================
+           6. <section> CENTEGENTE → TESTIMONIOS DE CLIENTES
+           Cada <article> es un testimonio (foto, frase, nombre y
+           urbanización). CSS: .testimonials, .testimonial, .quote
+           ======================================================== -->
+      <section class="testimonials">
+        <h2>Centegente</h2>
+        <p class="section-sub">Invierte con confianza en un futuro seguro. <strong>¡Compra hoy tu terreno con
+            Centenario!</strong></p>
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial">
+            <img src="Assets/Imagenes/Cliente1.png" alt="Entrega de terrenos Casablanca">
+            <blockquote class="quote">"Tenía muchas dudas sobre cómo dar el gran paso para adquirir mi terreno, pero el
+              equipo de Inmobiliaria Kristel me guió con total transparencia y profesionalismo. Encontré el lugar ideal
+              para mi futuro en el Proyecto La Perla - Chupaca (Lote 30), y la calidez humana te hace sentir parte de
+              una gran familia. ¡100% recomendados!"</blockquote>
+            <h3>Carlos Mendoza Quispe</h3>
+            <p class="testimonial-place">Proyecto La Perla - Chupaca (Lote 30)</p>
+          </article>
+
+          <article class="testimonial">
+            <img src="Assets/Imagenes/Cliente2.png" alt="Entrega de terrenos Valle Real">
+            <blockquote class="quote">"Lo que más valoro de Kristel es la seriedad y el cumplimiento. Visité varias
+              opciones, pero aquí sentí la seguridad jurídica y el respaldo que necesitaba para asegurar el patrimonio
+              de los míos en La Planicie - Pilcomayo (Lote 4). Ver mi sueño cada vez más cerca no tiene precio."
+            </blockquote>
+            <h3>Javier Alarcón Rojas</h3>
+            <p class="testimonial-place">La Planicie - Pilcomayo (Lote 4)</p>
+          </article>
+
+          <article class="testimonial">
+            <img src="Assets/Imagenes/Cliente3.png" alt="Atilio Luque">
+            <blockquote class="quote">"Decidimos apostar por Inmobiliaria Kristel buscando un lugar seguro y con
+              proyección para heredarle algo estable a nuestros hijos en Miraflores Alto - Pilcomayo (Lote 10). Nos
+              sorprendió la facilidad de los trámites y el trato tan amable. Fue la mejor decisión que pudimos tomar en
+              familia."</blockquote>
+            <h3>Eusebio Huamán y Carmen Rosa Flores</h3>
+            <p class="testimonial-place">Miraflores Alto - Pilcomayo (Lote 10)</p>
+          </article>
+
+          <article class="testimonial">
+            <img src="Assets/Imagenes/Cliente4.png" alt="Hemilda Castañeda">
+            <blockquote class="quote">"Como joven, buscar una propiedad parecía un proceso imposible y lleno de trabas.
+              Con Kristel todo fue distinto: asesoría clara, planes accesibles y cero complicaciones para adquirir mi
+              espacio en el Proyecto Valle - Sicaya (Lote 23 MB). Me da mucha tranquilidad saber que mi inversión está
+              segura."</blockquote>
+            <h3>Renzo Silva Paredes/h3>
+              <p class="testimonial-place">Proyecto Valle - Sicaya (Lote 23 MB)</p>
+          </article>
+
+          <article class="testimonial">
+            <img src="Assets/Imagenes/Cliente5.png" alt="Karina Moscol">
+            <blockquote class="quote">"Me llevé una grata sorpresa con el nivel de compromiso que tiene la Inmobiliaria
+              Kristel. Te acompañan en todo el proceso y te entregan la información transparente que uno busca al
+              asegurar su lote en el Proyecto Zona Verde - Orcotuna (Lote 21 MA). Siento que más que clientes, ganamos
+              aliados."</blockquote>
+            <h3>Wilmer Torres Cárdenas</h3>
+            <p class="testimonial-place">Proyecto Zona Verde - Orcotuna (Lote 21 MA)</p>
+          </article>
+
+        </div>
+      </section>
+
+
+      <!-- ========================================================
+           7. <section> RESPALDO → "CON EL RESPALDO DE" + CIFRAS
+           Logo del grupo, mensaje de confianza y 4 estadísticas.
+           CSS: .backing, .stats, .stat
+           ======================================================== -->
+      <section class="backing">
+        <h2>Con el respaldo de</h2>
+        <img class="backing-logo" src="Assets/Imagenes/Logo.png" alt="Inmobiliaria Kristel">
+        <p>Invierte con confianza en un futuro seguro para tu familia.<br>
+          <strong>¡Haz una compra 100% segura con Kristel!</strong>
+        </p>
+        <a class="btn btn-outline" href="/">¡Conocer más!</a>
+
+        <!-- Cifras: cambia el número (<strong>) y la descripción (<span>) -->
+        <div class="stats">
+          <article class="stat"><strong>+5</strong><span>años junto a ti</span></article>
+          <article class="stat"><strong>+20</strong><span>urbanizaciones en todo el Perú</span></article>
+          <article class="stat"><strong>+1000</strong><span>proyectos</span></article>
+          <article class="stat"><strong>+5</strong><span>proyectos entregados</span></article>
+        </div>
+      </section>
+
+
+      <!-- ========================================================
+           8. <section> CTA → LLAMADO A LA ACCIÓN "COMPRA HOY"
+           Lista de beneficios + botón. CSS: .cta, .benefits
+           ======================================================== -->
+      <section class="cta">
+        <h2>¡Compra hoy tu terreno con Kristel!</h2>
+        <ul class="benefits">
+          <li>Terrenos al contado</li>
+          <li>Zonas verdes y espacios públicos</li>
+          <li>Si pagas al contado, pide tu descuento</li>
+        </ul>
+        <a class="btn btn-primary" href="#registrate">Solicitar información</a>
+      </section>
+
+      <!-- ========================================================
+           8.1 <section> HUANCAYO → INFORMACIÓN DE HUANCAYO, JUNÍN, PERÚ
+           Cada <article class="info-card"> es un recuadro de datos:
+           edita el texto o copia un recuadro para añadir más.
+           CSS: .huancayo, .huancayo-grid, .info-card, .mapa-huancayo
+           ======================================================== -->
+      <section class="huancayo" id="huancayo">
+        <h2>Conoce Huancayo - Pilcomayo - Chupaca, Junín – Perú</h2>
+        <p class="section-sub">Capital de la región Junín, en el corazón del Valle del Mantaro, a unos 3,259 m s. n. m.
+        </p>
+
+        <div class="huancayo-grid">
+          <article class="info-card">
+            <h3>Ubicación</h3>
+            <p>Sierra central del Perú, a unos 300 km de Lima por la Carretera Central (entre 6 y 7 horas por carretera,
+              según el tráfico).</p>
+          </article>
+          <article class="info-card">
+            <h3>Clima</h3>
+            <p>Seco y templado-frío: días soleados, noches frías en invierno y lluvias principalmente entre diciembre y
+              marzo.</p>
+          </article>
+          <article class="info-card">
+            <h3>Qué visitar</h3>
+            <p>Parque de la Identidad Wanka, Cerrito de la Libertad, Torre Torre, Laguna de Paca y el nevado
+              Huaytapallana.</p>
+          </article>
+          <article class="info-card">
+            <h3>Gastronomía</h3>
+            <p>Papa a la huancaína, pachamanca, trucha frita y cuy colorado, además de los platos típicos de la Feria
+              Dominical.</p>
+          </article>
+          <article class="info-card">
+            <h3>Economía y comercio</h3>
+            <p>Centro comercial y agrícola del Valle del Mantaro, con la Feria Dominical de artesanía y una importante
+              oferta universitaria.</p>
+          </article>
+          <article class="info-card">
+            <h3>Cultura y artesanía</h3>
+            <p>Danzas como el huaylarsh, textiles de Hualhuas y mates burilados de Cochas, reconocidos en todo el país.
+            </p>
+          </article>
+        </div>
+
+        <!-- Mapa de Huancayo (Google Maps) -->
+        <iframe class="mapa-huancayo" src="https://www.google.com/maps?q=Huancayo,+Junin,+Peru&output=embed"
+          loading="lazy" title="Mapa de Huancayo, Junín"></iframe>
+      </section>
+
+
+      <!-- ========================================================
+           9. <section> BLOG → "CENTENARIO AL DÍA" (NOTICIAS)
+           Cada <article> es una noticia. CSS: .news, .news-card
+           ======================================================== -->
+      <section class="news">
+        <div class="section-head">
+          <h2>Kristel al día</h2>
+          <a href="/blog">Ver todas</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <span class="badge">Noticia · Nueva</span>
+            <h3><a href="/por-que-invertir-en-un-terreno-es-una-buena-opcion-en-2025/">¿Por qué invertir en un terreno
+                es una buena opción en 2025?</a></h3>
+            <time datetime="2025-01-15">15 de enero de 2025</time>
+          </article>
+
+          <article class="news-card">
+            <span class="badge">Noticia · Nueva</span>
+            <h3><a
+                href="/refiere-y-gana-kristel-premio-con-una-cena-navidena-a-los-ganadores-del-sorteo-del-programa-referidos/">Refiere
+                y Gana: Kristel premió con una Cena Navideña a los ganadores del sorteo</a></h3>
+            <time datetime="2025-01-15">15 de enero de 2025</time>
+          </article>
+
+          <article class="news-card">
+            <span class="badge">Noticia · Nueva</span>
+            <h3><a
+                href="/grupo-kristel-presento-su-primer-reporte-de-sostenibilidad-un-hito-en-el-inicio-de-un-camino-aun-mas-ambicioso/">Grupo
+                Kristel presentó su primer reporte de Sostenibilidad</a></h3>
+            <time datetime="2025-01-15">15 de enero de 2025</time>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- ==========================================================
+         10. <aside> → BARRA LATERAL DERECHA: FORMULARIO
+         "Quiero recibir información". En la web real aparece sobre
+         el banner. Se queda fija al bajar (sticky).
+         CSS: .sidebar, .lead-form, .form-field, .form-check
+         ========================================================== -->
+    <aside class="sidebar" id="registrate">
+      <article class="lead-form-box">
+        <h2>¡Estás a un paso de tener el terreno para tu familia!</h2>
+
+        <!-- PASO 1: datos personales -->
+        <form class="lead-form" id="form-solicitud" action="#" method="post">
+          <h3>Quiero recibir información</h3>
+
+          <div class="form-field">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" required>
+          </div>
+
+          <div class="form-field">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+          </div>
+
+          <div class="form-field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="tipo-doc">Tipo de documento</label>
+              <select id="tipo-doc" name="tipo-doc">
+                <option>DNI</option>
+                <option>CARNET DE EXTRANJERÍA</option>
+                <option>Pasaporte</option>
+                <option>P.T.P.</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="documento">No. documento</label>
+              <input type="text" id="documento" name="documento" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+
+          <div class="form-field">
+            <label for="lugar">¿Dónde quieres vivir?</label>
+            <select id="lugar" name="lugar">
+              <option value="">¿Dónde quieres vivir?</option>
+              <option>Pilcomayo (Km75) - Proyecto La Planicie</option>
+              <option>Chupaca (Km77.5) - Proyecto valle</option>
+              <option>Huancayo (Km78) - Proyecto Mirador del Valle</option>
+            </select>
+          </div>
+
+          <!-- Casillas legales -->
+          <label class="form-check">
+            <input type="checkbox" name="terminos" required>
+            He leído y acepto los <a href="terminos.html">Términos y Condiciones</a> y
+            la <a href="terminos.html">Política de Privacidad</a>
+          </label>
+
+          <label class="form-check">
+            <input type="checkbox" name="publicidad">
+            Acepto el envío de Publicidad según <a href="terminos.html">Política de
+              Privacidad</a>
+          </label>
+
+          <label class="form-check">
+            <input type="checkbox" name="perfilamiento">
+            Acepto el perfilamiento según <a href="terminos.html">Política de
+              Privacidad</a>
+          </label>
+
+          <p class="msg" id="msg-solicitud" role="status"></p>
+          <button type="submit" class="btn btn-primary btn-block">Solicitar información</button>
+        </form>
+
+      </article>
+    </aside>
+
+  </div><!-- /.layout -->
+
+
+  <!-- ============================================================
+       11. <footer> → PIE DE PÁGINA
+       Enlaces útiles, redes sociales, libro de reclamaciones y
+       derechos de autor. CSS: .site-footer, .footer-links,
+       .social, .copyright
+       ============================================================ -->
+  <footer class="site-footer">
+
+    <!-- 11.1 Enlaces del pie -->
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="proyectos.html">Condominios</a></li>
+        <li><a href="terminos.html">Políticas de Privacidad</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="mailto:qmagaly113@gmail.com">Gmail</a></li>
+        <li><a href="tel:+51941381634">Contacto</a></li>
+        <li><a href="terminos.html">Términos y condiciones</a></li>
+      </ul>
+    </nav>
+
+    <!-- 11.2 Botón contacto + Libro de reclamaciones -->
+    <div class="footer-actions">
+      <a class="btn btn-primary" href="tel:+51941381634">Contacto</a>
+      <a href="terminos.html">
+        <img src="https://centenario.com.pe/wp-content/uploads/2025/03/libro-reclamaciones.png"
+          alt="Libro de reclamaciones" width="80 px">
+      </a>
+    </div>
+
+    <!-- 11.3 Redes sociales -->
+    <div class="social">
+      <a href="https://www.facebook.com/share/1HGyetrwru/">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="https://www.tiktok.com/@kristelinmobiliaria?_r=1&_t=ZS-9AurXd7ms5q">TikTok</a>
+    </div>
+
+    <!-- 11.4 Derechos de autor y créditos -->
+    <p class="copyright">Copyright 2026 Kristel.com.pe - Todos los derechos reservados.</p>
+    <p class="copyright">Hecho con ♥ por gabriel.com</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
