@@ -208,11 +208,11 @@ const placeholder = (t) => 'data:image/svg+xml;utf8,' + encodeURIComponent(
   '<text x="50%" y="50%" text-anchor="middle" font-family="Arial" font-size="22" fill="#5b06e3">' + t + '</text></svg>');
 
 const proyectos = [
-  { nombre: 'Urbanización Mirador del Valle', zona: ' Junin / Pilcomayo', img: 'Assets/Imagenes/Urbanización Mirador del Valle.png', plano: 'Assets/Planos/CIPRIANO CHUPACA.pdf', direccion: 'Urbanización Mirador del Valle, Pilcomayo, Junín, Perú' },
-  { nombre: 'Proyecto Alto Miraflores', zona: 'Junin / Pilcomayo', img: 'Assets/Imagenes/Proyecto Alto Miraflores.png', plano: 'Assets/Planos/proyecto2.pdf', direccion: 'Proyecto Alto Miraflores, Pilcomayo, Junín, Perú' },
-  { nombre: 'Proyecto la Perla', zona: 'Junin / Chupaca', img: 'Assets/Imagenes/Proyecto la Perla.png', plano: 'Assets/Planos/LA PERLA CHUPACA.pdf', direccion: 'Proyecto la Perla, Chupaca, Junín, Perú' },
-  { nombre: 'Proyecto La Planicie', zona: 'Junin / Pilcomayo', img: 'Assets/Imagenes/Proyecto La Planicie.png', plano: 'Assets/Planos/LA PLANICIE PILCOMAYO.pdf', direccion: 'Proyecto La Planicie, Pilcomayo, Junín, Perú' },
-  { nombre: 'Proyecto Valle', zona: 'Junin / Chupaca', img: 'Assets/Imagenes/Proyecto Valle.png', plano: 'Assets/Planos/VALLE CHUPACA.pdf', direccion: 'Proyecto Valle, Chupaca, Junín, Perú' },
+  { nombre: 'Urbanización Mirador del Valle', zona: ' Junin / Pilcomayo', img: 'Urbanización Mirador del Valle.png', plano: 'CIPRIANO CHUPACA.pdf', direccion: 'Urbanización Mirador del Valle, Pilcomayo, Junín, Perú' },
+  { nombre: 'Proyecto Alto Miraflores', zona: 'Junin / Pilcomayo', img: 'Proyecto Alto Miraflores.png', plano: '#', direccion: 'Proyecto Alto Miraflores, Pilcomayo, Junín, Perú' },
+  { nombre: 'Proyecto la Perla', zona: 'Junin / Chupaca', img: 'Proyecto la Perla.png', plano: '#', direccion: 'Proyecto la Perla, Chupaca, Junín, Perú' },
+  { nombre: 'Proyecto La Planicie', zona: 'Junin / Pilcomayo', img: 'Proyecto La Planicie.png', plano: '#', direccion: 'Proyecto La Planicie, Pilcomayo, Junín, Perú' },
+  { nombre: 'Proyecto Valle', zona: 'Junin / Chupaca', img: 'Proyecto Valle.png', plano: '#', direccion: 'Proyecto Valle, Chupaca, Junín, Perú' },
 ];
 
 function initProyectos() {
